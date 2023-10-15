@@ -15,46 +15,51 @@ const cnfpwd = document.getElementById("cnfpwd");
 const errorBoxes = document.querySelectorAll(".error");
 const form = document.querySelector("form");
 
-
-
+form.addEventListener("input", function() {
+    setInterval(checker, 500);
+})
 
 
 function checker(){
     if(!fname.checkValidity()){
-        fname.nextSibling.textContent = fname.validationMessage;
+        errorBoxes[0].textContent = fname.validationMessage;
     } else {
-        fname.nextSibling.textContent = "";
+        errorBoxes[0].textContent = "";
     }
     
 
     if(!lname.checkValidity()){
-        lname.nextSibling.textContent = lname.validationMessage;
+        errorBoxes[1].textContent = lname.validationMessage;
     } else {
-        lname.nextSibling.textContent = "";
+        errorBoxes[1].textContent = "";
     }
 
     if(!email.checkValidity()){
-        email.nextSibling.textContent = email.validationMessage;
+        errorBoxes[2].textContent = email.validationMessage;
     } else {
-        email.nextSibling.textContent = "";
+        errorBoxes[2].textContent = "";
     }
 
     if(!num.checkValidity()){
-        num.nextSibling.textContent = num.validationMessage;
+        errorBoxes[3].textContent = num.validationMessage;
     } else {
-        num.nextSibling.textContent = ""; 
+        errorBoxes[3].textContent = ""; 
     }
 
     if(!pwd.checkValidity()){
-        pwd.nextSibling.textContent = pwd.validationMessage;
+        errorBoxes[4].textContent = pwd.validationMessage;
     }
     else {
-        pwd.nextSibling.textContent = "";
+        errorBoxes[4].textContent = "";
     }
 
     if(!cnfpwd.checkValidity()){
-        cnfpwd.nextSibling.textContent = cnfpwd.validationMessage;
+        errorBoxes[5].textContent = cnfpwd.validationMessage;
     } else {
-        cnfpwd.nextSibling.textContent = "";
+        errorBoxes[5].textContent = "";
+    }
+
+    if (pwd.value !== cnfpwd.value) {
+        errorBoxes[4].textContent, errorBoxes[5].textContent = "Passwords do not Match!";
     }
 }
