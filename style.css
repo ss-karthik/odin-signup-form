@@ -6,7 +6,43 @@
 
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .image img {
     max-width: 450px;
 }
+
+.content, .form {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+form div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input {
+    width: 300px;
+}
+
+form div div {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    align-self: flex-start;
+    width: 100px;
+    height: 40px;
+
+}
+

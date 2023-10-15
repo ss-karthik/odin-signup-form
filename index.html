@@ -11,7 +11,59 @@
         <img src="vista-wei-OiERUvVrioU-unsplash.jpg">
     </div>
     <div class="content">
-        <p>THIS IS A MOCK FORM. This is not a real online service. Random quote representing the brand and stuff. Sign up <em>now</em> to get started.</p>
+        <div>
+            <p>THIS IS A MOCK FORM. This is not a real online service. Random quote representing the brand and stuff. Sign up <em>now</em> to get started.</p>
+        </div>
+        <div class="form">
+            <form>
+                
+                <div>
+                    <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required>
+                <span class="error"></span>
+                </div>
+
+                <div>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required>
+                <span class="error"></span>
+                </div>
+                </div>
+
+                <div>
+                    <div>
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error"></span>
+                </div>
+                <div>
+                <label for="num">Phone Number</label>
+                <input type="number" id="num" name="num" required>
+                <span class="error"></span>
+                </div>
+                </div>
+                
+                <div>
+                    <div>
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" name="pwd" required>
+                <span class="error"></span>
+                </div>
+
+                <div>
+                <label for="cnfpwd">Confirm Password</label>
+                <input type="password" id="cnfpwd" name="cnfpwd" required>
+                <span class="error"></span>
+                </div>
+                </div>
+
+                <button type="submit" onclick="checker()">Sign Up</button>
+
+            </form>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
